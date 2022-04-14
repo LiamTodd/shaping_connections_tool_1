@@ -3,10 +3,10 @@ var data = [
       className: 'className', // optional can be used for styling
       axes: [
         {axis: "Technical skills", value: 0}, 
-        {axis: "Information and search skills", value: 0}, 
+        {axis: "Information & search skills", value: 0}, 
         {axis: "Mobile device use skills", value: 0},  
-        {axis: "Social and sharing skills", value: 0},  
-        {axis: "Content and creative skills", value: 0}
+        {axis: "Social & sharing skills", value: 0},  
+        {axis: "Content & creative skills", value: 0}
       ]
     },
   ];
@@ -108,17 +108,18 @@ const setUp = () => {
         `<div id='questions${i+1}' 
         style="background-color:${backgroundColours[i]};padding:100px;width=100%">
 
-            <h3>${data[0]['axes'][i]['axis']}</h3>
+            <h3 class='font1 header'>${data[0]['axes'][i]['axis']}</h3>
         </div>`
 
         for (j=0; j < 4; j++){
             document.getElementById(`questions${i+1}`).innerHTML +=
             `<span>
-                <span style='display:inline-block;width:70%;padding:10px'>
-                    question ${j+1}: ${questions[i][j]}
+                <span class='font1' style='display:inline-block;width:70%;padding:10px;'>
+                    <b>${j+1}. ${questions[i][j]}<b>
+                    <p></p>
+                    <button class='btn B${i}' id='yes-button${i+1}${j+1}' onclick="onClickYes('${i+1}${j+1}')">YES</button>
+                    <button class='btn B${i}' id='no-button${i+1}${j+1}'onclick="onClickNo('${i+1}${j+1}')">NO</button> 
                 </span>
-                <button class='btn B${i}' id='yes-button${i+1}${j+1}' onclick="onClickYes('${i+1}${j+1}')">YES</button>
-                <button class='btn B${i}' id='no-button${i+1}${j+1}'onclick="onClickNo('${i+1}${j+1}')">NO</button> 
             </span><br>`
         }
 

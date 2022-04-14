@@ -58,3 +58,13 @@
     background: rgb(170, 191, 172);
     color: rgb(0, 0, 0);
   }
+
+
+  .font1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+  }
+  .header{
+    font-size: 30px;
+    font-weight: bolder
+  }
