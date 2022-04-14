@@ -106,7 +106,7 @@ const setUp = () => {
     for (i = 0; i < 5; i++){
         document.getElementById("questions").innerHTML +=
         `<div id='questions${i+1}' 
-        style="background-color:${backgroundColours[i]};padding:100px;width=100%">
+        style="background-color:${backgroundColours[i]};padding:100px;width:100%">
 
             <h3 class='font1 header'>${data[0]['axes'][i]['axis']}</h3>
         </div>`
