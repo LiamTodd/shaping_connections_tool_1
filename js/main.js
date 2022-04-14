@@ -18,6 +18,13 @@ const questions = [
     ["Change who I share content with online (e.g., friends, friends of friends, public)", "Add or remove people from the contact lists", "Block people from seeing what I post online", "Purposely deciding when and which information I should and shouldn’t share online"],
     ["Design a website (e.g., setting up a personal blog on WordPress)", "Create and post video content online (e.g., on YouTube or Tik-Tok)", "Create something new from existing online images, music, or videos", "Make basic changes to the content that others have produced"],
 ]
+
+const pink = "rgb(180, 153, 194)"
+const purple = "rgb(137, 131, 186)"
+const darker_blue = "rgb(171, 192, 231)"
+const light_blue = "#aee1e8";
+const light_green = "rgb(170, 191, 172)"
+const button_colours = [pink, purple, darker_blue, light_blue, light_green]
 var chart;
 var cfg;
 var svg;
@@ -52,7 +59,7 @@ const onClickYes = (idNum) =>{
     const categoryIndex = idNum.slice(0,1)
     liveScores[parseInt(categoryIndex)-1] += 5
     // update colours
-    document.getElementById(yesId).style.backgroundColor = 'green'
+    document.getElementById(yesId).style.backgroundColor = button_colours[idNum.slice(0,1)-1]
     document.getElementById(yesId).disabled = true
     document.getElementById(noId).style.backgroundColor = 'white'
     document.getElementById(noId).disabled = false
@@ -69,7 +76,7 @@ const onClickNo = (idNum) =>{
         liveScores[parseInt(categoryIndex)-1] -= 5
     }
     // update colours
-    document.getElementById(noId).style.backgroundColor = 'green'
+    document.getElementById(noId).style.backgroundColor = button_colours[idNum.slice(0,1)-1]
     document.getElementById(noId).disabled = true
     document.getElementById(yesId).style.backgroundColor = 'white'
     document.getElementById(yesId).disabled = false
@@ -91,7 +98,9 @@ const setUp = () => {
     updateChart(initial_score)
     for (i = 0; i < 5; i++){
         document.getElementById("questions").innerHTML +=
-        `<div id='questions${i+1}'>
+        `<div id='questions${i+1}' 
+        style="background-color:white;padding:10px">
+
             <h3>${data[0]['axes'][i]['axis']}</h3>
         </div>`
 
@@ -101,8 +110,8 @@ const setUp = () => {
                 <span style='display:inline-block;width:70%'>
                     question ${j+1}: ${questions[i][j]}
                 </span>
-                <button id='yes-button${i+1}${j+1}' onclick="onClickYes('${i+1}${j+1}')">yes</button>
-                <button id='no-button${i+1}${j+1}'onclick="onClickNo('${i+1}${j+1}')">no</button>
+                <button class='btn B${i}' id='yes-button${i+1}${j+1}' onclick="onClickYes('${i+1}${j+1}')">YES</button>
+                <button class='btn B${i}' id='no-button${i+1}${j+1}'onclick="onClickNo('${i+1}${j+1}')">NO</button> 
             </span><br>`
         }
 

@@ -1,0 +1,64 @@
+.btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    font: normal normal bold 16px/1.4em 'space grotesk',sans-serif;
+  }
+
+  .B0 {
+    border-color: rgb(180, 153, 194);
+    /* color: #6cabdf; */
+    border-radius: 10%;
+    height:min-content
+  }
+  .B0:hover {
+    background: rgb(180, 153, 194);
+    color: rgb(0, 0, 0);
+  }
+ 
+  .B1 {
+    border-color: rgb(137, 131, 186);
+    /* color: #6cabdf; */
+    border-radius: 10%;
+    height:min-content
+  }
+  .B1:hover {
+    background: rgb(137, 131, 186);
+    color: rgb(0, 0, 0);
+  }
+
+  .B2 {
+    border-color: rgb(171, 192, 231);
+    /* color: #6cabdf; */
+    border-radius: 10%;
+    height:min-content
+  }
+  .B2:hover {
+    background: rgb(171, 192, 231);
+    color: rgb(0, 0, 0);
+  }
+
+  .B3 {
+    border-color: #aee1e8;
+    /* color: #6cabdf; */
+    border-radius: 10%;
+    height:min-content
+  }
+  .B3:hover {
+    background: #aee1e8;
+    color: rgb(0, 0, 0);
+  }
+
+  .B4 {
+    border-color: rgb(170, 191, 172);
+    /* color: #6cabdf; */
+    border-radius: 10%;
+    height:min-content
+  }
+  .B4:hover {
+    background: rgb(170, 191, 172);
+    color: rgb(0, 0, 0);
+  }
