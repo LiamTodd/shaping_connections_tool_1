@@ -19,12 +19,19 @@ const questions = [
     ["Design a website (e.g., setting up a personal blog on WordPress)", "Create and post video content online (e.g., on YouTube or Tik-Tok)", "Create something new from existing online images, music, or videos", "Make basic changes to the content that others have produced"],
 ]
 
-const pink = "rgb(180, 153, 194)"
-const purple = "rgb(137, 131, 186)"
-const darker_blue = "rgb(171, 192, 231)"
-const light_blue = "#aee1e8";
-const light_green = "rgb(170, 191, 172)"
-const button_colours = [pink, purple, darker_blue, light_blue, light_green]
+const buttonPink = "rgb(180, 153, 194)"
+const buttonPurple = "rgb(137, 131, 186)"
+const buttonBlue = "rgb(171, 192, 231)"
+const buttonLightBlue = "#aee1e8";
+const buttonGreen = "rgb(170, 191, 172)"
+const buttonColours = [buttonPink, buttonPurple, buttonBlue, buttonLightBlue, buttonGreen]
+
+const backgroundPink = "rgb(244, 235, 248)";
+const backgroundPurple = "rgb(239, 236, 255)";
+const backgroundBlue = "rgb(230, 239, 255)";
+const backgroundLightBlue = "#f1fdff";
+const backgroundGreen = "rgb(237, 243, 239)";
+const backgroundColours = [backgroundPink, backgroundPurple, backgroundBlue, backgroundLightBlue, backgroundGreen]
 var chart;
 var cfg;
 var svg;
@@ -59,9 +66,9 @@ const onClickYes = (idNum) =>{
     const categoryIndex = idNum.slice(0,1)
     liveScores[parseInt(categoryIndex)-1] += 5
     // update colours
-    document.getElementById(yesId).style.backgroundColor = button_colours[idNum.slice(0,1)-1]
+    document.getElementById(yesId).style.backgroundColor = buttonColours[idNum.slice(0,1)-1]
     document.getElementById(yesId).disabled = true
-    document.getElementById(noId).style.backgroundColor = 'white'
+    document.getElementById(noId).style.backgroundColor = backgroundColours[idNum.slice(0,1)-1]
     document.getElementById(noId).disabled = false
 
     updateChart(liveScores)
@@ -76,9 +83,9 @@ const onClickNo = (idNum) =>{
         liveScores[parseInt(categoryIndex)-1] -= 5
     }
     // update colours
-    document.getElementById(noId).style.backgroundColor = button_colours[idNum.slice(0,1)-1]
+    document.getElementById(noId).style.backgroundColor = buttonColours[idNum.slice(0,1)-1]
     document.getElementById(noId).disabled = true
-    document.getElementById(yesId).style.backgroundColor = 'white'
+    document.getElementById(yesId).style.backgroundColor = backgroundColours[idNum.slice(0,1)-1]
     document.getElementById(yesId).disabled = false
 
     updateChart(liveScores)
@@ -99,15 +106,15 @@ const setUp = () => {
     for (i = 0; i < 5; i++){
         document.getElementById("questions").innerHTML +=
         `<div id='questions${i+1}' 
-        style="background-color:white;padding:10px">
+        style="background-color:${backgroundColours[i]};padding:20px">
 
             <h3>${data[0]['axes'][i]['axis']}</h3>
-        </div>`
+        </div><br>`
 
         for (j=0; j < 4; j++){
             document.getElementById(`questions${i+1}`).innerHTML +=
             `<span>
-                <span style='display:inline-block;width:70%'>
+                <span style='display:inline-block;width:70%;padding:10px'>
                     question ${j+1}: ${questions[i][j]}
                 </span>
                 <button class='btn B${i}' id='yes-button${i+1}${j+1}' onclick="onClickYes('${i+1}${j+1}')">YES</button>
