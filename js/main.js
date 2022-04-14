@@ -106,10 +106,10 @@ const setUp = () => {
     for (i = 0; i < 5; i++){
         document.getElementById("questions").innerHTML +=
         `<div id='questions${i+1}' 
-        style="background-color:${backgroundColours[i]};padding:20px">
+        style="background-color:${backgroundColours[i]};padding:100px;width=100%">
 
             <h3>${data[0]['axes'][i]['axis']}</h3>
-        </div><br>`
+        </div>`
 
         for (j=0; j < 4; j++){
             document.getElementById(`questions${i+1}`).innerHTML +=
