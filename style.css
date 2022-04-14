@@ -71,9 +71,9 @@
 
 
   /* suss tings */
-  html, body {
-    overflow-x: hidden;
+  /* html, body {
+    overflow-x:visible;
   }
   body {
     position: relative
-  }
+  } */
