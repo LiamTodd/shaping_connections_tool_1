@@ -3,7 +3,7 @@ var RadarChart = {
       containerClass: 'radar-chart',
       w: 600,
       h: 600,
-      factor: 0.9, // edit 0.95 - just size
+      factor: 0.8, // edit 0.95 - just size
       factorLegend: 1, // edit 1 where legend sits relative to centre
       levels: 5, // edit 3
       maxValue: 0,

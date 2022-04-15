@@ -22,6 +22,7 @@ const questions = [
     ["Design a website (e.g., setting up a personal blog on WordPress)", "Create and post video content online (e.g., on YouTube or Tik-Tok)", "Create something new from existing online images, music, or videos", "Make basic changes to the content that others have produced"],
 ]
 
+// tracks which answers have been answered
 var clicked = [
     [false, false, false, false],
     [false, false, false, false],
@@ -184,6 +185,8 @@ const initialSetUp = () => {
         </div>
         <div style='padding:400px'>
             <button class="btn see-result" onclick="window.scrollBy(0,700)">SEE MY RESULTS</button>
+            <br><br>
+            <button class="btn take-back" onClick="window.location.href='https://www.shapingconnections.org/'">TAKE ME BACK</button>
         </div>
     </div>
 

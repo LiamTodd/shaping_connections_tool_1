@@ -1,1 +1,1 @@
-document.getElementById('everything').innerHTML += `<h1>PHONE</h1>`
+document.getElementById('everything').innerHTML += `<h1>Phone display under construction</h1>`
