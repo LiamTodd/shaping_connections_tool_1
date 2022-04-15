@@ -111,12 +111,12 @@ const setUp = () => {
         document.getElementById("questions").innerHTML +=
         `<div style="background-color:${backgroundColours[i]};width:100%;height:500px">
 
-            <div class='${floatOrder[i%2]}' id='questions${i+1}'>
+            <div class='${floatOrder[i%2]}' id='questions${i+1}' style='width:50%;content-align:${floatOrder[i%2]};padding-left:80px'>
 
-             <h3 class='font1 header' style='padding-left:40px'>${data[0]['axes'][i]['axis']}</h3>
+             <h3 class='font1 header'>${data[0]['axes'][i]['axis']}</h3>
 
             </div>
-            <div class='${floatOrder[(i+1)%2]}' style='padding-right:40px; padding-top:8%'>
+            <div class='${floatOrder[(i+1)%2]}' style='padding-${floatOrder[(i+1)%2]}:40px; padding-top:8%'>
 
                 <img class='category_images' src='img/${imgSources[i]}' alt='image'>
 
@@ -127,7 +127,7 @@ const setUp = () => {
         for (j=0; j < 4; j++){
             document.getElementById(`questions${i+1}`).innerHTML +=
             `
-            <span class='font1' style='display:inline-block;width:70%;padding-left:40px;'>
+            <span class='font1' style='display:inline-block;width:70%;height: 80px'>
                 <b>${j+1}. ${questions[i][j]}<b>
                 <p></p>
                 <button class='btn B${i}' id='yes-button${i+1}${j+1}' onclick="onClickYes('${i+1}${j+1}')">YES</button>
