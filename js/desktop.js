@@ -101,7 +101,41 @@ const normaliseToFives = (values) => {
     }
 }
 
+const initialSetUp = () => {
+    console.log('here')
+    document.getElementById('everything').innerHTML += 
+    `
+    <div style="padding: 40px;height:350px;">
+    <div class="left" style="width:40%;padding-top:50px">
+      <button class="btn back-button" onClick="window.location.href='https://www.shapingconnections.org/'">BACK</button>
+      <h1 class="font1">How confident are you around tehcnology in general?</h1>
+      <p class="font1">Answer <u><b>yes/no</b></u> as to whether you could confidently perform the following tasks.</p>
+      <button class="btn get-started">GET STARTED</button>
+    </div>
+    <div class="right" style="width:50%;padding-top:0px">
+      <img class='top-img' src="img/Dawn_edited.png">
+    </div>
+  </div>
+
+
+  <div id="questions"></div>
+
+  <div>
+    <div class='left' style="width:60%; padding-left: 40px">
+      <h1 class="font1" >Based on our assessment tool, your level of internet skills confidence looks like this:</h1>
+
+      <div id='radar-container'></div>
+    </div>
+    <div class='right' style="padding-top: 40px; padding-right: 100px">
+      <img class='bottom-img' src="img/tool 1.png">
+    </div>
+    `
+}
+
 const setUp = () => {
+
+    initialSetUp()
+
     RadarChart.defaultConfig.color = function() {
         return "rgb(150, 183, 142)"
     };
