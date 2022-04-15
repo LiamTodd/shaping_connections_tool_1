@@ -14,6 +14,16 @@
       transform: scale(0.80)
   }
 
+  .back-button{
+    border-color: rgb(230, 130, 130);
+  }
+
+  .get-started{
+    border:rgb(230, 130, 130);
+    background: rgb(230, 130, 130);
+    width: 150px
+  }
+
   .B0 {
     border-color: rgb(180, 153, 194);
     background-color: rgb(244, 235, 248);
@@ -79,6 +89,10 @@
   }
   .right{
     float: right;
+  }
+
+  .top-img{
+    width: 500px
   }
 
 /* 

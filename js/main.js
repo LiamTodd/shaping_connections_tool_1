@@ -107,6 +107,9 @@ const setUp = () => {
     };
     const initial_score = [5, 5, 5, 5, 5]
     updateChart(initial_score)
+
+
+    // style questions
     for (i = 0; i < 5; i++){
         document.getElementById("questions").innerHTML +=
         `<div style="background-color:${backgroundColours[i]};width:100%;height:700px">
