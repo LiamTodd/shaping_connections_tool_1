@@ -107,7 +107,7 @@
     width: 300px;
   }
 
-  .test{
-    color:#dcddde
+  html {
+    scroll-behavior: smooth;
   }
 

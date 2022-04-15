@@ -110,7 +110,7 @@ const initialSetUp = () => {
       <button class="btn back-button" onClick="window.location.href='https://www.shapingconnections.org/'">BACK</button>
       <h1 class="font1">How confident are you around tehcnology in general?</h1>
       <p class="font1">Answer <u><b>yes/no</b></u> as to whether you could confidently perform the following tasks.</p>
-      <button class="btn get-started" onclick="smoothScroll(document.getElementById('questions3'))"; >GET STARTED</button>
+      <button class="btn get-started" href='#questions2'; >GET STARTED</button>
     </div>
     <div class="right" style="width:50%;padding-top:0px">
       <img class='top-img' src="img/Dawn_edited.png">
