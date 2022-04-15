@@ -70,8 +70,8 @@
   }
 
   .category_images{
-    height: 300px;
-    width: auto;
+    width:500px;
+    height:auto
   }
 
   .left{
@@ -85,3 +85,9 @@
   body, html {
     width:100%;
   } */
+
+  @media only screen and (max-width: 500px) {
+    img {
+       display: none;
+    }
+}

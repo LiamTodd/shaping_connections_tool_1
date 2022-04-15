@@ -109,14 +109,14 @@ const setUp = () => {
     updateChart(initial_score)
     for (i = 0; i < 5; i++){
         document.getElementById("questions").innerHTML +=
-        `<div style="background-color:${backgroundColours[i]};width:100%;height:500px">
+        `<div style="background-color:${backgroundColours[i]};width:100%;height:700px">
 
-            <div class='${floatOrder[i%2]}' id='questions${i+1}' style='width:50%;content-align:${floatOrder[i%2]};padding-left:80px'>
+            <div class='${floatOrder[i%2]}' id='questions${i+1}' style='width:50%;content-align:${floatOrder[i%2]};padding-left:50px'>
 
              <h3 class='font1 header'>${data[0]['axes'][i]['axis']}</h3>
 
             </div>
-            <div class='${floatOrder[(i+1)%2]}' style='padding-${floatOrder[(i+1)%2]}:40px; padding-top:8%'>
+            <div class='${floatOrder[(i+1)%2]}' style='padding:40px'>
 
                 <img class='category_images' src='img/${imgSources[i]}' alt='image'>
 
