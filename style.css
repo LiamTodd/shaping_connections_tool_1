@@ -24,6 +24,14 @@
     width: 150px
   }
 
+  .see-result{
+    border:rgb(230, 130, 130);
+    background: rgb(230, 130, 130);
+    width: 200px;
+    height: 50px;
+
+  }
+
   .B0 {
     border-color: rgb(180, 153, 194);
     background-color: rgb(244, 235, 248);
@@ -99,13 +107,7 @@
     width: 300px;
   }
 
-/* 
-  body, html {
-    width:100%;
-  } */
+  .test{
+    color:#dcddde
+  }
 
-  @media only screen and (max-width: 500px) {
-    img {
-       display: none;
-    }
-}
