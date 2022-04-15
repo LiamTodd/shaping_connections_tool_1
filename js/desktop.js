@@ -22,6 +22,14 @@ const questions = [
     ["Design a website (e.g., setting up a personal blog on WordPress)", "Create and post video content online (e.g., on YouTube or Tik-Tok)", "Create something new from existing online images, music, or videos", "Make basic changes to the content that others have produced"],
 ]
 
+var clicked = [
+    [false, false, false, false],
+    [false, false, false, false],
+    [false, false, false, false],
+    [false, false, false, false],
+    [false, false, false, false],
+]
+
 const buttonPink = "rgb(180, 153, 194)"
 const buttonPurple = "rgb(137, 131, 186)"
 const buttonBlue = "rgb(171, 192, 231)"
@@ -75,6 +83,12 @@ const onClickYes = (idNum) =>{
     document.getElementById(noId).style.backgroundColor = backgroundColours[idNum.slice(0,1)-1]
     document.getElementById(noId).disabled = false
 
+    clicked[idNum.slice(0,1)-1][idNum.slice(1,2)-1] = true
+    if (clicked[idNum.slice(0,1)-1][0] && clicked[idNum.slice(0,1)-1][1] &&clicked[idNum.slice(0,1)-1][2] && clicked[idNum.slice(0,1)-1][3]){
+        window.scrollBy(0,700)
+    }
+    console.log(clicked)
+
     updateChart(liveScores)
 }
 
@@ -91,6 +105,12 @@ const onClickNo = (idNum) =>{
     document.getElementById(noId).disabled = true
     document.getElementById(yesId).style.backgroundColor = backgroundColours[idNum.slice(0,1)-1]
     document.getElementById(yesId).disabled = false
+
+    clicked[idNum.slice(0,1)-1][idNum.slice(1,2)-1] = true
+    if (clicked[idNum.slice(0,1)-1][0] && clicked[idNum.slice(0,1)-1][1] &&clicked[idNum.slice(0,1)-1][2] && clicked[idNum.slice(0,1)-1][3]){
+        window.scrollBy(0,700)
+    }
+    console.log(clicked)
 
     updateChart(liveScores)
 }
@@ -110,7 +130,7 @@ const initialSetUp = () => {
       <button class="btn back-button" onClick="window.location.href='https://www.shapingconnections.org/'">BACK</button>
       <h1 class="font1">How confident are you around tehcnology in general?</h1>
       <p class="font1">Answer <u><b>yes/no</b></u> as to whether you could confidently perform the following tasks.</p>
-      <button class="btn get-started" href='#questions2'; >GET STARTED</button>
+      <button class="btn get-started" onclick="window.scrollBy(0,450)"; >GET STARTED</button>
     </div>
     <div class="right" style="width:50%;padding-top:0px">
       <img class='top-img' src="img/Dawn_edited.png">
@@ -163,7 +183,7 @@ const initialSetUp = () => {
             <img class='category_images' src='img/tanned_santa.png' alt='image'>
         </div>
         <div style='padding:400px'>
-            <button class="btn see-result">SEE MY RESULTS</button>
+            <button class="btn see-result" onclick="window.scrollBy(0,700)">SEE MY RESULTS</button>
         </div>
     </div>
 
