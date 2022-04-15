@@ -51,7 +51,7 @@ const updateChart = (values) => {
 
     chart = RadarChart.chart();
     cfg = chart.config(); // retrieve default config
-    svg = d3.select('body').append('svg')
+    svg = d3.select('#radar-container').append('svg') // default 'body'
     .attr('width', cfg.w + cfg.w + 50)
     .attr('height', cfg.h + cfg.h / 4)
     .attr('id', 'radar-chart');
