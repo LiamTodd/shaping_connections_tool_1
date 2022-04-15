@@ -11,6 +11,8 @@ var data = [
     },
   ];
 
+const imgSources = ["technical_skills.png", "information_and_search_skills.png", "mobile_device_use_skills.png", "social_and_sharing_skills.png", "content_and_creative_skills.png"]
+
 const questions = [
     ["Download files or photos from the internet","Download files or photos from the internet", "Use shortcut keys on my computer and mobile devices (e.g., CTRL-C for copy, CTRL- S for save)", "Bookmark a website on my computer and mobile devices"],
     ["Find the best keywords for online searches", "Navigate websites to find what I am looking for", "Tell the difference between real and fake information online", "Find a website I visited before"],
@@ -32,6 +34,7 @@ const backgroundBlue = "rgb(230, 239, 255)";
 const backgroundLightBlue = "#f1fdff";
 const backgroundGreen = "rgb(237, 243, 239)";
 const backgroundColours = [backgroundPink, backgroundPurple, backgroundBlue, backgroundLightBlue, backgroundGreen]
+
 var chart;
 var cfg;
 var svg;
@@ -109,6 +112,7 @@ const setUp = () => {
         style="background-color:${backgroundColours[i]};padding:100px;width:100%">
 
             <h3 class='font1 header'>${data[0]['axes'][i]['axis']}</h3>
+            <img src='img/${imgSources[i]}' alt='image'>
         </div>`
 
         for (j=0; j < 4; j++){
