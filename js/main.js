@@ -12,6 +12,7 @@ var data = [
   ];
 
 const imgSources = ["technical_skills.png", "information_and_search_skills.png", "mobile_device_use_skills.png", "social_and_sharing_skills.png", "content_and_creative_skills.png"]
+const floatOrder=["left", "right"]
 
 const questions = [
     ["Download files or photos from the internet","Download files or photos from the internet", "Use shortcut keys on my computer and mobile devices (e.g., CTRL-C for copy, CTRL- S for save)", "Bookmark a website on my computer and mobile devices"],
@@ -111,8 +112,13 @@ const setUp = () => {
         `<div id='questions${i+1}' 
         style="background-color:${backgroundColours[i]};padding:100px;width:100%">
 
-            <h3 class='font1 header'>${data[0]['axes'][i]['axis']}</h3>
-            <img src='img/${imgSources[i]}' alt='image'>
+            <div class='${floatOrder[i%2]}'>
+             <h3 class='font1 header' style='width:50%'>${data[0]['axes'][i]['axis']}</h3>
+            </div>
+            <div class='${floatOrder[(i+1)%2]}'>
+                <img class='category_images' src='img/${imgSources[i]}' alt='image'>
+            </div>
+            
         </div>`
 
         for (j=0; j < 4; j++){
@@ -125,6 +131,7 @@ const setUp = () => {
                     <button class='btn B${i}' id='no-button${i+1}${j+1}'onclick="onClickNo('${i+1}${j+1}')">NO</button> 
                 </span>
             </span><br>`
+            
         }
 
     }
