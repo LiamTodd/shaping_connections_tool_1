@@ -109,28 +109,32 @@ const setUp = () => {
     updateChart(initial_score)
     for (i = 0; i < 5; i++){
         document.getElementById("questions").innerHTML +=
-        `<div id='questions${i+1}' 
-        style="background-color:${backgroundColours[i]};padding:100px;width:100%">
+        `<div style="background-color:${backgroundColours[i]};width:100%;height:500px">
 
-            <div class='${floatOrder[i%2]}'>
-             <h3 class='font1 header' style='width:50%'>${data[0]['axes'][i]['axis']}</h3>
+            <div class='${floatOrder[i%2]}' id='questions${i+1}'>
+
+             <h3 class='font1 header' style='padding-left:40px'>${data[0]['axes'][i]['axis']}</h3>
+
             </div>
-            <div class='${floatOrder[(i+1)%2]}'>
+            <div class='${floatOrder[(i+1)%2]}' style='padding-right:40px; padding-top:8%'>
+
                 <img class='category_images' src='img/${imgSources[i]}' alt='image'>
+
             </div>
             
         </div>`
 
         for (j=0; j < 4; j++){
             document.getElementById(`questions${i+1}`).innerHTML +=
-            `<span>
-                <span class='font1' style='display:inline-block;width:70%;padding:10px;'>
-                    <b>${j+1}. ${questions[i][j]}<b>
-                    <p></p>
-                    <button class='btn B${i}' id='yes-button${i+1}${j+1}' onclick="onClickYes('${i+1}${j+1}')">YES</button>
-                    <button class='btn B${i}' id='no-button${i+1}${j+1}'onclick="onClickNo('${i+1}${j+1}')">NO</button> 
-                </span>
-            </span><br>`
+            `
+            <span class='font1' style='display:inline-block;width:70%;padding-left:40px;'>
+                <b>${j+1}. ${questions[i][j]}<b>
+                <p></p>
+                <button class='btn B${i}' id='yes-button${i+1}${j+1}' onclick="onClickYes('${i+1}${j+1}')">YES</button>
+                <button class='btn B${i}' id='no-button${i+1}${j+1}'onclick="onClickNo('${i+1}${j+1}')">NO</button> 
+            </span>
+            <br><br>
+            `
             
         }
 

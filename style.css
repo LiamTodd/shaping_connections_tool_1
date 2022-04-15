@@ -76,18 +76,12 @@
 
   .left{
     float: left;
-    width: 50%;
   }
   .right{
     float: right;
-    width: 50%;
   }
 
-
-  /* suss tings */
-  /* html, body {
-    overflow-x:visible;
-  }
-  body {
-    position: relative
+/* 
+  body, html {
+    width:100%;
   } */
