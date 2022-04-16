@@ -145,7 +145,7 @@ const initialSetUp = () => {
   <div id="questions"></div>
 
   <div style="background-color:#fffbee;width:${maxWidth};height:750px;padding:10px">
-    <div style='content-align:left'>
+    <div style='content-align:center'>
         <h2 style='font-size:25px' class='font1 header'>You have now completed our confidence in internet skills assessment tool.</h2>
         <img class='category_images' style='height:270px;width:auto' src='img/Friend_my_age.png' alt='image'>
         <br>
@@ -157,8 +157,8 @@ const initialSetUp = () => {
         </p>
         <br><br><br>
 
-    <div style="background-color:#dcddde;width:${maxWidth};height:800px">
-    <div style='content-align:left;padding:10px'>
+    <div style="background-color:#dcddde;width:${maxWidth};height:850px">
+    <div style='text-align:center;padding:10px'>
         <img class='category_images' style='height:300px;width:auto' src='img/tanned_santa_edited.png' alt='image'>
         <p class='font1 header' style='font-size:20px'>Internet skills form a crucial part of digital inclusion to assist you with:</p>
         <p class='font1' style='font-size:15px'>
@@ -173,10 +173,11 @@ const initialSetUp = () => {
         <p class='font1' style='font-size:15px'>
         4. Gaming: Playing standalone or connected/networked games online.
         </p>
-        <button class="btn see-result" onclick="window.scrollBy(0,590)">SEE MY RESULTS</button>
+        <button class="btn see-result" onclick="window.scrollBy(0,620)">SEE MY RESULTS</button>
         <br><br>
         <button class="btn take-back" onClick="window.location.href='https://www.shapingconnections.org/'">TAKE ME BACK</button>
     </div>
+    <br><br>
 
   <div>
     <div style="width:${maxWidth}; padding: 10px">
@@ -202,10 +203,10 @@ const setUp = () => {
         document.getElementById("questions").innerHTML +=
         `<div style="background-color:${backgroundColours[i]};width:${maxWidth};height:1000px;padding:10px">
 
-            <div id='questions${i+1}'>
+            <div id='questions${i+1}' style='text-align:center'>
 
              <h3 class='font1 header'>${data[0]['axes'][i]['axis']}</h3>
-            <img class='category_images' style='padding-right:50px;height:400px;width:auto' src='img/${imgSources[i]}' alt='image'>
+            <img class='category_images' style='height:400px;width:auto' src='img/${imgSources[i]}' alt='image'>
 
             </div>
             
