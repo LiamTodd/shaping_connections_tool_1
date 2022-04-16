@@ -49,6 +49,8 @@ var chart;
 var cfg;
 var svg;
 
+const maxWidth = screen.availWidth
+
 const updateChart = (values) => {
 
     for (i = 0; i < values.length; i++){
@@ -126,7 +128,7 @@ const initialSetUp = () => {
     console.log('here')
     document.getElementById('everything').innerHTML += 
     `
-    <div style="padding: 15px;height:600px;width:100vw">
+    <div style="padding: 15px;height:600px;width:${maxWidth}">
     <div style="padding-top:10px">
       <button class="btn back-button" onClick="window.location.href='https://www.shapingconnections.org/'">BACK</button>
       <br><br>
@@ -142,7 +144,7 @@ const initialSetUp = () => {
 
   <div id="questions"></div>
 
-  <div style="background-color:#fffbee;width:100vw;height:750px;padding:10px">
+  <div style="background-color:#fffbee;width:${maxWidth};height:750px;padding:10px">
     <div style='content-align:left'>
         <h2 style='font-size:25px' class='font1 header'>You have now completed our confidence in internet skills assessment tool.</h2>
         <img class='category_images' style='height:270px;width:auto' src='img/Friend_my_age.png' alt='image'>
@@ -155,7 +157,7 @@ const initialSetUp = () => {
         </p>
         <br><br><br>
 
-    <div style="background-color:#dcddde;width:100vw;height:800px">
+    <div style="background-color:#dcddde;width:${maxWidth};height:800px">
     <div style='content-align:left;padding:10px'>
         <img class='category_images' style='height:300px;width:auto' src='img/tanned_santa_edited.png' alt='image'>
         <p class='font1 header' style='font-size:20px'>Internet skills form a crucial part of digital inclusion to assist you with:</p>
@@ -177,7 +179,7 @@ const initialSetUp = () => {
     </div>
 
   <div>
-    <div style="width:100vw%; padding: 10px">
+    <div style="width:${maxWidth}; padding: 10px">
       <h1 class="font1" style='font-size:25px'>Based on our assessment tool, your level of internet skills confidence looks like this:</h1>
       <div id='radar-container'></div>
     </div>
@@ -198,7 +200,7 @@ const setUp = () => {
     // style questions
     for (i = 0; i < 5; i++){
         document.getElementById("questions").innerHTML +=
-        `<div style="background-color:${backgroundColours[i]};width:100vw;height:1000px;padding:10px">
+        `<div style="background-color:${backgroundColours[i]};width:${maxWidth};height:1000px;padding:10px">
 
             <div id='questions${i+1}'>
 
