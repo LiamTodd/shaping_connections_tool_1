@@ -145,7 +145,7 @@ const initialSetUp = () => {
   <div id="questions"></div>
 
   <div style="background-color:#fffbee;width:${maxWidth};height:750px;padding:10px">
-    <div style='content-align:center'>
+    <div style='text-align:center'>
         <h2 style='font-size:25px' class='font1 header'>You have now completed our confidence in internet skills assessment tool.</h2>
         <img class='category_images' style='height:270px;width:auto' src='img/Friend_my_age.png' alt='image'>
         <br>
