@@ -16,6 +16,7 @@
 
   .back-button{
     border-color: rgb(230, 130, 130);
+    background-color: white;
   }
 
   .get-started{
@@ -33,7 +34,7 @@
 
   .take-back{
     border-color:rgb(230, 130, 130);
-    /* background: rgb(230, 130, 130); */
+    background-color: white;
     width: 200px;
     height: 50px;
   }
