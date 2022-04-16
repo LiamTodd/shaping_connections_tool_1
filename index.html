@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shaping Connections Tool 1</title>
   </head>
-<body>
+<body id="body-id">
   <link rel="stylesheet" href="https://yui-s.yahooapis.com/pure/0.5.0/pure-min.css">
   <link rel="stylesheet" href="chart.css">
   <link rel="stylesheet" href="style.css">
@@ -33,15 +33,27 @@
 
   <script>
         window.onload = () => {
-            if (screen && screen.width > 900){
+          if (screen && screen.width > 900){
+
+            const chartConfig = document.createElement('script')
+            chartConfig.setAttribute('src', 'js/chart_config_desktop.js')
+            document.getElementById('body-id').appendChild(chartConfig)
+
             const script = document.createElement('script')
             script.setAttribute('src', 'js/desktop.js')
             document.getElementById('everything').appendChild(script)
+
         }
         else{
+
+            const chartConfig = document.createElement('script')
+            chartConfig.setAttribute('src', 'js/chart_config_phone.js')
+            document.getElementById('body-id').appendChild(chartConfig)
+            
             const script = document.createElement('script')
             script.setAttribute('src', 'js/phone.js')
             document.getElementById('everything').appendChild(script)
+
         }
         }
 
@@ -52,7 +64,6 @@
 
   
   <script src="js/chart_base.js"></script>
-  <script src="js/chart_config.js"></script>
 
 </body>
 </html>

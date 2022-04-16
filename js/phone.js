@@ -61,8 +61,8 @@ const updateChart = (values) => {
     chart = RadarChart.chart();
     cfg = chart.config(); // retrieve default config
     svg = d3.select('#radar-container').append('svg') // default 'body'
-    .attr('width', cfg.w + cfg.w + 50)
-    .attr('height', cfg.h + cfg.h / 4)
+    .attr('width', screen.availWidth)
+    .attr('height', screen.availWidth)
     .attr('id', 'radar-chart');
     svg.append('g').classed('single', 1).datum(data).call(chart);
 
@@ -86,7 +86,7 @@ const onClickYes = (idNum) =>{
 
     clicked[idNum.slice(0,1)-1][idNum.slice(1,2)-1] = true
     if (clicked[idNum.slice(0,1)-1][0] && clicked[idNum.slice(0,1)-1][1] &&clicked[idNum.slice(0,1)-1][2] && clicked[idNum.slice(0,1)-1][3]){
-        window.scrollBy(0,700)
+        window.scrollBy(0,620)
     }
     console.log(clicked)
 
@@ -109,7 +109,7 @@ const onClickNo = (idNum) =>{
 
     clicked[idNum.slice(0,1)-1][idNum.slice(1,2)-1] = true
     if (clicked[idNum.slice(0,1)-1][0] && clicked[idNum.slice(0,1)-1][1] &&clicked[idNum.slice(0,1)-1][2] && clicked[idNum.slice(0,1)-1][3]){
-        window.scrollBy(0,700)
+        window.scrollBy(0,630)
     }
     console.log(clicked)
 
@@ -126,78 +126,60 @@ const initialSetUp = () => {
     console.log('here')
     document.getElementById('everything').innerHTML += 
     `
-    <div style="padding: 40px;height:350px;">
-    <div class="left" style="width:40%;padding-top:50px">
+    <div style="padding: 15px;height:600px;width:100vw">
+    <div style="padding-top:10px">
       <button class="btn back-button" onClick="window.location.href='https://www.shapingconnections.org/'">BACK</button>
-      <h1 class="font1">How confident are you around tehcnology in general?</h1>
+      <br><br>
+      <img class='top-img' style='height:200px;width:auto' src="img/Dawn_edited.png">
+      <br><br>
+      <h1 class="font1" style='font-size:25px'>How confident are you around tehcnology in general?</h1>
+      <br><br>
       <p class="font1">Answer <u><b>yes/no</b></u> as to whether you could confidently perform the following tasks.</p>
-      <button class="btn get-started" onclick="window.scrollBy(0,450)"; >GET STARTED</button>
-    </div>
-    <div class="right" style="width:50%;padding-top:0px">
-      <img class='top-img' src="img/Dawn_edited.png">
+      <button class="btn get-started" onclick="window.scrollBy(0,640)"; >GET STARTED</button>
     </div>
   </div>
 
 
   <div id="questions"></div>
 
-  <div style="background-color:#fffbee;width:100%;height:700px">
-    <div class='left' style='width:50%;content-align:left;padding-left:50px'>
-        <h2 style='font-size:50px' class='font1 header'>You have now completed our confidence in internet skills assessment tool.</h2>
-        <br><br><br><br>
-        <p style='font-size:10px'>
+  <div style="background-color:#fffbee;width:100vw;height:750px;padding:10px">
+    <div style='content-align:left'>
+        <h2 style='font-size:25px' class='font1 header'>You have now completed our confidence in internet skills assessment tool.</h2>
+        <img class='category_images' style='height:270px;width:auto' src='img/Friend_my_age.png' alt='image'>
+        <br>
+        <p style='font-size:10px' class='font1'>
         The questions in our assessment tool were based on: Alexander J.A.M.
-        </p>
-        <p style='font-size:10px'>
         van Deursen, Ellen J. Helsper & Rebecca Eynon (2016) Development and
-        </p>
-        <p style='font-size:10px'>
         validation of the Internet Skills Scale (ISS), Information, Communication &
-        </p>
-        <p style='font-size:10px'>
         Society, 19:6, 804-823, DOI: 10.1080/1369118X.2015.1078834
         </p>
-    </div>
-        <div class='right' style='padding:40px'>
-            <img class='category_images' src='img/Friend_my_age.png' alt='image'>
-        </div>
-    </div>
+        <br><br><br>
 
-    <div style="background-color:#dcddde;width:100%;height:700px">
-    <div class='left' style='width:50%;content-align:left;padding-left:50px'>
-        <p class='font1 header'>Internet skills form a crucial part of digital inclusion to assist you with:</p>
-        <p class='font1'>
+    <div style="background-color:#dcddde;width:100vw;height:800px">
+    <div style='content-align:left;padding:10px'>
+        <img class='category_images' style='height:300px;width:auto' src='img/tanned_santa_edited.png' alt='image'>
+        <p class='font1 header' style='font-size:20px'>Internet skills form a crucial part of digital inclusion to assist you with:</p>
+        <p class='font1' style='font-size:15px'>
         1. Everyday living: Using a search engine for research, emailing, banking, paying bills, reading news, accessing services (e.g. MyGov), making Zoom or other video calls.
         </p>
-        <p class='font1'>
+        <p class='font1' style='font-size:15px'>
         2. Shopping and entertainment: Various forms of online shopping, consuming books/magazines/movies/TV online.
         </p>
-        <p class='font1'>
+        <p class='font1' style='font-size:15px'>
         3. Social networking: Chatting on messenger apps, uploading content for friends and family.
         </p>
-        <p class='font1'>
+        <p class='font1' style='font-size:15px'>
         4. Gaming: Playing standalone or connected/networked games online.
         </p>
-        
-    </div>
-        <div class='right' style='padding:40px'>
-            <img class='category_images' src='img/tanned_santa.png' alt='image'>
-        </div>
-        <div style='padding:400px'>
-            <button class="btn see-result" onclick="window.scrollBy(0,700)">SEE MY RESULTS</button>
-            <br><br>
-            <button class="btn take-back" onClick="window.location.href='https://www.shapingconnections.org/'">TAKE ME BACK</button>
-        </div>
+        <button class="btn see-result" onclick="window.scrollBy(0,590)">SEE MY RESULTS</button>
+        <br><br>
+        <button class="btn take-back" onClick="window.location.href='https://www.shapingconnections.org/'">TAKE ME BACK</button>
     </div>
 
   <div>
-    <div class='left' style="width:60%; padding-left: 40px">
-      <h1 class="font1" >Based on our assessment tool, your level of internet skills confidence looks like this:</h1>
-
+    <div style="width:100vw%; padding: 10px">
+      <h1 class="font1" style='font-size:25px'>Based on our assessment tool, your level of internet skills confidence looks like this:</h1>
       <div id='radar-container'></div>
-    </div>
-    <div class='right' style="padding-top: 40px; padding-right: 100px">
-      <img class='bottom-img' src="img/tool 1.png">
     </div>
     `
 }
@@ -216,16 +198,12 @@ const setUp = () => {
     // style questions
     for (i = 0; i < 5; i++){
         document.getElementById("questions").innerHTML +=
-        `<div style="background-color:${backgroundColours[i]};width:100%;height:700px">
+        `<div style="background-color:${backgroundColours[i]};width:100vw;height:1000px;padding:10px">
 
-            <div class='${floatOrder[i%2]}' id='questions${i+1}' style='width:50%;content-align:${floatOrder[i%2]};padding-left:50px'>
+            <div id='questions${i+1}'>
 
              <h3 class='font1 header'>${data[0]['axes'][i]['axis']}</h3>
-
-            </div>
-            <div class='${floatOrder[(i+1)%2]}' style='padding:40px'>
-
-                <img class='category_images' src='img/${imgSources[i]}' alt='image'>
+            <img class='category_images' style='padding-right:50px;height:400px;width:auto' src='img/${imgSources[i]}' alt='image'>
 
             </div>
             
