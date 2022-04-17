@@ -147,7 +147,7 @@ const initialSetUp = () => {
       <br><br>
       <img class='top-img' style='height:200px;width:auto' src="img/Dawn_edited.png">
       <br><br>
-      <p class="font1 header" style='font-size:25px'>How confident are you around tehcnology in general?</p>
+      <p class="font1 header" style='font-size:22px'>How confident are you around tehcnology in general?</p>
       <br><br>
       <p class="font1">Answer <u><b>yes/no</b></u> as to whether you could confidently perform the following tasks.</p>
       <button class="btn get-started" onclick="window.scrollBy(0,640)"; >GET STARTED</button>
