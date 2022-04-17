@@ -8,7 +8,7 @@
   </head>
 <body id="body-id">
   <link rel="stylesheet" href="https://yui-s.yahooapis.com/pure/0.5.0/pure-min.css">
-  <link rel="stylesheet" href="chart.css">
+  <!-- <link rel="stylesheet" href="chart.css"> -->
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +35,11 @@
         window.onload = () => {
           if (screen && screen.width > 900){
 
+            const chartCss = document.createElement('link')
+            chartCss.setAttribute('rel', 'stylesheet')
+            chartCss.setAttribute('href', 'chart_desktop.css')
+            document.getElementById('body-id').appendChild(chartCss)
+
             const htmlToCanvas = document.createElement('script')
             htmlToCanvas.setAttribute('src', 'js/html2canvas.js')
             document.getElementById('body-id').appendChild(htmlToCanvas)
@@ -56,6 +61,11 @@
             })
         }
         else{
+
+            const chartCss = document.createElement('link')
+            chartCss.setAttribute('rel', 'stylesheet')
+            chartCss.setAttribute('href', 'chart_phone.css')
+            document.getElementById('body-id').appendChild(chartCss)
 
             const htmlToCanvas = document.createElement('script')
             htmlToCanvas.setAttribute('src', 'js/html2canvas.js')
