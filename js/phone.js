@@ -192,12 +192,12 @@ const initialSetUp = () => {
     <br><br>
 
    <div>
-    <div style="width:${maxWidth}; padding: 10px" id='to-capture'>
-      <h1 class="font1" style='font-size:25px'>Based on our assessment tool, your level of internet skills confidence looks like this:</h1>
-      <div id='radar-container'></div>
-    </div>
-    <div style='width:${maxWidth};text-align:center'>
-        <button onclick='capture()' class='btn see-result' >SAVE MY RESULT</button>
+      <div style="width:${maxWidth}; padding: 10px" id='to-capture'>
+        <h1 class="font1" style='font-size:25px'>Based on our assessment tool, your level of internet skills confidence looks like this:</h1>
+        <div id='radar-container'>
+        </div>
+      </div>
+      <button onclick='capture()' class='btn see-result' >SAVE MY RESULT</button>
     </div>
 
     `
