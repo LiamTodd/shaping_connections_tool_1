@@ -159,7 +159,7 @@ const initialSetUp = () => {
 
   <div style="background-color:#fffbee;width:${maxWidth};height:750px;padding:10px">
     <div style='text-align:center'>
-        <h2 style='font-size:25px' class='font1 header'>You have now completed our confidence in internet skills assessment tool.</h2>
+        <h2 style='font-size:22px' class='font1 header'>You have now completed our confidence in internet skills assessment tool.</h2>
         <img class='category_images' style='height:270px;width:auto' src='img/Friend_my_age.png' alt='image'>
         <br>
         <p style='font-size:10px' class='font1'>
@@ -194,7 +194,7 @@ const initialSetUp = () => {
 
    <div>
       <div style="width:${maxWidth}; padding: 10px" id='to-capture'>
-        <p class="font1 header" style='font-size:25px'>Based on our assessment tool, your level of internet skills confidence looks like this:</p>
+        <p class="font1 header" style='font-size:22px'>Based on our assessment tool, your level of internet skills confidence looks like this:</p>
         <div id='radar-container'>
         </div>
       </div>
@@ -221,7 +221,7 @@ const setUp = () => {
 
             <div id='questions${i+1}' style='text-align:center'>
 
-             <h3 class='font1 header'>${data[0]['axes'][i]['axis']}</h3>
+             <h3 class='font1 header' style='font-size:22px'>${data[0]['axes'][i]['axis']}</h3>
             <img class='category_images' style='height:400px;width:auto' src='img/${imgSources[i]}' alt='image'>
 
             </div>
