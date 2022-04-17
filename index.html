@@ -35,6 +35,10 @@
         window.onload = () => {
           if (screen && screen.width > 900){
 
+            const htmlToCanvas = document.createElement('script')
+            htmlToCanvas.setAttribute('src', 'js/html2canvas.js')
+            document.getElementById('body-id').appendChild(htmlToCanvas)
+
             const chartBase = document.createElement('script')
             chartBase.setAttribute('src', 'js/chart_base.js')
             document.getElementById('body-id').appendChild(chartBase)
@@ -52,6 +56,10 @@
             })
         }
         else{
+
+            const htmlToCanvas = document.createElement('script')
+            htmlToCanvas.setAttribute('src', 'js/html2canvas.js')
+            document.getElementById('body-id').appendChild(htmlToCanvas)
 
             const chartBase = document.createElement('script')
             chartBase.setAttribute('src', 'js/chart_base.js')
