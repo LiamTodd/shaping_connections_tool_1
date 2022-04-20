@@ -179,8 +179,6 @@ const initialSetUp = () => {
         4. Gaming: Playing standalone or connected/networked games online.
         </p>
         <button class="btn see-result" onclick="window.scrollBy(0,620)">SEE MY RESULTS</button>
-        <br><br>
-        <button class="btn take-back" onClick="window.location.href='https://www.shapingconnections.org/'">TAKE ME BACK</button>
     </div>
     <br><br>
 
@@ -191,7 +189,8 @@ const initialSetUp = () => {
         </div>
       </div>
       <div style='text-align:center'>
-        <button onclick='downloadImage()' class='btn see-result'>DOWNLOAD MY RESULTS</button>
+      <br><br>
+      <button class="btn take-back" onClick="window.location.href='https://www.shapingconnections.org/'">LEARN MORE</button>
       </div>
     </div>
 
