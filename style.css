@@ -6,6 +6,7 @@
     border-radius: 5px;
     cursor: pointer;
     font: normal normal 15px/1.4em 'space grotesk',sans-serif;
+    /* font-family: 'Space Grotesk', sans-serif; */
     font-weight: 550;
     transition: all 300ms ease;
     
