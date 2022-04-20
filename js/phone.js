@@ -125,17 +125,31 @@ const normaliseToFives = (values) => {
 }
 
 // NOTE: unable to do screen capture on phone
-// const capture = () => {
-//     html2canvas(document.getElementById('to-capture')).then(function (canvas) {
-//         const url = canvas.toDataURL("image/jpeg", 1)
-//         debugBase64(url)
-//     })
-// }
+const chartToUrl = () => {
+    var url
+    return html2canvas(document.getElementById('to-capture')).then(function (canvas) {
+        url = canvas.toDataURL("image/jpeg", 1)
+        return url
+    })
+}
 
-// const debugBase64 = (base64URL) => {
-//     const win = window.open();
-//     win.document.write('<iframe src="' + base64URL  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
-// }
+
+async function downloadImage() {
+    const imageSrcPromise = chartToUrl()
+    imageSrcPromise.then(async function(imageSrc){
+        const image = await fetch(imageSrc)
+        const imageBlog = await image.blob()
+        const imageURL = URL.createObjectURL(imageBlog)
+      
+        const link = document.createElement('a')
+        link.href = imageURL
+        link.download = 'My Results'
+        document.body.appendChild(link)
+        link.click()
+        document.body.removeChild(link)
+    })
+
+  }
 
 const initialSetUp = () => {
     console.log('here')
@@ -194,11 +208,14 @@ const initialSetUp = () => {
     </div>
     <br><br>
 
-   <div>
-      <div style="width:${maxWidth}; padding: 10px; background-color: white" id='to-capture'>
+   <div style="width:${maxWidth}; padding: 10px; background-color: white">
+      <div id='to-capture'>
         <p class="font1 header" style='font-size:22px'>Based on our assessment tool, your level of internet skills confidence looks like this:</p>
         <div id='radar-container'>
         </div>
+      </div>
+      <div style='text-align:center'>
+        <button onclick='downloadImage()' class='btn see-result'>DOWNLOAD MY RESULTS</button>
       </div>
     </div>
 
