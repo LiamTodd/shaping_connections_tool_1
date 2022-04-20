@@ -212,8 +212,13 @@ const initialSetUp = () => {
         <img class='bottom-img' src="img/tool 1.png">
         <br><br>
         <div style='padding-left:50px'>
-            <button onclick='capture()' class='btn see-result' >SAVE MY RESULT</button>
+            <button onclick='capture()' class='btn see-result'>SAVE MY RESULT</button>
         </div>
+    </div>
+
+    <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/SMirC-thumbsup.svg" width="200" height="200">
+        <a href="#" download="https://upload.wikimedia.org/wikipedia/commons/1/1f/SMirC-thumbsup.svg"> Download Image </a>
     </div>
 
     `
