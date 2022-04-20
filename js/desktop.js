@@ -122,17 +122,45 @@ const normaliseToFives = (values) => {
     }
 }
 
-const capture = () => {
-    html2canvas(document.getElementById('to-capture')).then(function (canvas) {
-        const url = canvas.toDataURL("image/jpeg", 1)
-        debugBase64(url)
+// const capture = () => {
+//     let url = ""
+//     html2canvas(document.getElementById('to-capture')).then(function (canvas) {
+//         url = canvas.toDataURL("image/jpeg", 1)
+//         return url
+//         debugBase64(url)
+//     })
+// }
+
+// const debugBase64 = (base64URL) => {
+//     const win = window.open();
+//     win.document.write('<iframe src="' + base64URL  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
+// }
+
+const chartToUrl = () => {
+    var url
+    return html2canvas(document.getElementById('to-capture')).then(function (canvas) {
+        url = canvas.toDataURL("image/jpeg", 1)
+        return url
     })
 }
 
-const debugBase64 = (base64URL) => {
-    const win = window.open();
-    win.document.write('<iframe src="' + base64URL  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
-}
+
+async function downloadImage() {
+    const imageSrcPromise = chartToUrl()
+    imageSrcPromise.then(async function(imageSrc){
+        const image = await fetch(imageSrc)
+        const imageBlog = await image.blob()
+        const imageURL = URL.createObjectURL(imageBlog)
+      
+        const link = document.createElement('a')
+        link.href = imageURL
+        link.download = 'My Results'
+        document.body.appendChild(link)
+        link.click()
+        document.body.removeChild(link)
+    })
+
+  }
 
 const initialSetUp = () => {
     console.log('here')
@@ -212,13 +240,8 @@ const initialSetUp = () => {
         <img class='bottom-img' src="img/tool 1.png">
         <br><br>
         <div style='padding-left:50px'>
-            <button onclick='capture()' class='btn see-result'>SAVE MY RESULT</button>
+            <button onclick='downloadImage()' class='btn see-result'>DOWNLOAD MY RESULTS</button>
         </div>
-    </div>
-
-    <div>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/SMirC-thumbsup.svg" width="200" height="200">
-        <a href="#" download="https://upload.wikimedia.org/wikipedia/commons/1/1f/SMirC-thumbsup.svg"> Download Image </a>
     </div>
 
     `
