@@ -141,7 +141,7 @@ const initialSetUp = () => {
     console.log('here')
     document.getElementById('everything').innerHTML += 
     `
-    <div style="padding: 15px;height:600px;width:${maxWidth}">
+    <div style="padding: 15px;height:fit-content;width:${maxWidth}">
     <div style="padding-top:10px">
       <button class="btn back-button" onClick="window.location.href='https://www.shapingconnections.org/'">BACK</button>
       <br><br>
