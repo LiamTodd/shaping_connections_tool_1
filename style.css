@@ -9,7 +9,6 @@
     /* font-family: 'Space Grotesk', sans-serif; */
     font-weight: 550;
     transition: all 300ms ease;
-    
   }
   .btn:active{
       transform: scale(0.80)
