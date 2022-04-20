@@ -225,8 +225,6 @@ const initialSetUp = () => {
         </div>
         <div style='padding:400px'>
             <button class="btn see-result" onclick="window.scrollBy(0,700)">SEE MY RESULTS</button>
-            <br><br>
-            <button class="btn take-back" onClick="window.location.href='https://www.shapingconnections.org/'">TAKE ME BACK</button>
         </div>
     </div>
 
@@ -241,6 +239,8 @@ const initialSetUp = () => {
         <br><br>
         <div style='padding-left:50px'>
             <button onclick='downloadImage()' class='btn see-result'>DOWNLOAD MY RESULTS</button>
+            <br><br>
+            <button class="btn take-back" onClick="window.location.href='https://www.shapingconnections.org/'">LEARN MORE</button>
         </div>
     </div>
 
