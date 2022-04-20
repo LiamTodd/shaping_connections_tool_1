@@ -125,31 +125,7 @@ const normaliseToFives = (values) => {
 }
 
 // NOTE: unable to do screen capture on phone
-const chartToUrl = () => {
-    var url
-    return html2canvas(document.getElementById('to-capture')).then(function (canvas) {
-        url = canvas.toDataURL("image/jpeg", 1)
-        return url
-    })
-}
 
-
-async function downloadImage() {
-    const imageSrcPromise = chartToUrl()
-    imageSrcPromise.then(async function(imageSrc){
-        const image = await fetch(imageSrc)
-        const imageBlog = await image.blob()
-        const imageURL = URL.createObjectURL(imageBlog)
-      
-        const link = document.createElement('a')
-        link.href = imageURL
-        link.download = 'My Results'
-        document.body.appendChild(link)
-        link.click()
-        document.body.removeChild(link)
-    })
-
-  }
 
 const initialSetUp = () => {
     console.log('here')
