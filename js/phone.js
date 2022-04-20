@@ -145,7 +145,7 @@ const initialSetUp = () => {
     <div style="padding-top:10px">
       <button class="btn back-button" onClick="window.location.href='https://www.shapingconnections.org/'">BACK</button>
       <br><br>
-      <img class='top-img' style='height:200px;width:auto' src="img/Dawn_edited.png">
+      <img class='top-img' style='width:${maxWidth-10}px;height:auto' src="img/Dawn_edited.png">
       <br><br>
       <p class="font1 header" style='font-size:22px'>How confident are you around tehcnology in general?</p>
       <br><br>
@@ -157,10 +157,10 @@ const initialSetUp = () => {
 
   <div id="questions"></div>
 
-  <div style="background-color:#fffbee;width:${maxWidth};height:750px;padding:10px">
+  <div style="background-color:#fffbee;width:${maxWidth};height:fit-content;padding:10px">
     <div style='text-align:center'>
         <h2 style='font-size:22px' class='font1 header'>You have now completed our confidence in internet skills assessment tool.</h2>
-        <img class='category_images' style='height:270px;width:auto' src='img/Friend_my_age.png' alt='image'>
+        <img class='category_images' style='width:${maxWidth-10}px;height:auto' src='img/Friend_my_age.png' alt='image'>
         <br>
         <p style='font-size:10px' class='font1'>
         The questions in our assessment tool were based on: Alexander J.A.M.
@@ -169,10 +169,12 @@ const initialSetUp = () => {
         Society, 19:6, 804-823, DOI: 10.1080/1369118X.2015.1078834
         </p>
         <br><br><br>
+    </div>
+    </div>
 
-    <div style="background-color:#dcddde;width:${maxWidth};height:850px">
+    <div style="background-color:#dcddde;width:${maxWidth};height:fit-content">
     <div style='text-align:center;padding:10px'>
-        <img class='category_images' style='height:300px;width:auto' src='img/tanned_santa_edited.png' alt='image'>
+        <img class='category_images' style='width:${maxWidth-10}px;height:auto' src='img/tanned_santa_edited.png' alt='image'>
         <p class='font1 header' style='font-size:20px'>Internet skills form a crucial part of digital inclusion to assist you with:</p>
         <p class='font1' style='font-size:15px'>
         1. Everyday living: Using a search engine for research, emailing, banking, paying bills, reading news, accessing services (e.g. MyGov), making Zoom or other video calls.
@@ -193,7 +195,7 @@ const initialSetUp = () => {
     <br><br>
 
    <div>
-      <div style="width:${maxWidth}; padding: 10px" id='to-capture'>
+      <div style="width:${maxWidth}; padding: 10px; background-color: white" id='to-capture'>
         <p class="font1 header" style='font-size:22px'>Based on our assessment tool, your level of internet skills confidence looks like this:</p>
         <div id='radar-container'>
         </div>
@@ -217,12 +219,12 @@ const setUp = () => {
     // style questions
     for (i = 0; i < 5; i++){
         document.getElementById("questions").innerHTML +=
-        `<div style="background-color:${backgroundColours[i]};width:${maxWidth};height:1000px;padding:10px">
+        `<div style="background-color:${backgroundColours[i]};width:${maxWidth};height:fit-content;padding:10px">
 
             <div id='questions${i+1}' style='text-align:center'>
 
              <h3 class='font1 header' style='font-size:22px'>${data[0]['axes'][i]['axis']}</h3>
-            <img class='category_images' style='height:400px;width:auto' src='img/${imgSources[i]}' alt='image'>
+            <img class='category_images' style='width:${maxWidth-10}px;height:auto' src='img/${imgSources[i]}' alt='image'>
 
             </div>
             
