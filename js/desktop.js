@@ -226,7 +226,7 @@ const initialSetUp = () => {
         <div style='padding-left:50px'>
             <button onclick='downloadImage()' class='btn see-result'>DOWNLOAD MY RESULTS</button>
             <br><br>
-            <button class="btn take-back" onClick="window.location.href='https://www.shapingconnections.org/'">LEARN MORE</button>
+            <button class="btn take-back" onClick="window.location.href='https://www.shapingconnections.org/tool-1'">LEARN MORE</button>
 
         
         </div>

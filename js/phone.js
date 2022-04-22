@@ -175,11 +175,11 @@ const initialSetUp = () => {
       </div>
       <div style='text-align:center'>
       <br><br>
-      <button class="btn take-back" onClick="window.location.href='https://www.shapingconnections.org/'">LEARN MORE</button>
+      <button class="btn take-back" onClick="window.location.href='https://www.shapingconnections.org/tool-1'">LEARN MORE</button>
       </div>
 
       <br><br><br>
-      <p style='font-size:8px' class='font1'>
+      <p style='font-size:8px;text-align:center' class='font1'>
       Tool designed by Liam Todd - toddliam26@gmail.com
       </p>
     </div>
