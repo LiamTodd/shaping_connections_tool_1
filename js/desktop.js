@@ -184,7 +184,9 @@ const initialSetUp = () => {
   <div style="background-color:#fffbee;width:100%;height:700px">
     <div class='left' style='width:50%;content-align:left;padding-left:50px'>
         <h2 style='font-size:50px' class='font1 header'>You have now completed our confidence in internet skills assessment tool.</h2>
-        <br><br><br><br>
+        <br><br>
+        <button class="btn see-result" onclick="window.scrollBy(0,700)">SEE MY RESULTS</button>
+        <br><br>
         <p style='font-size:10px'>
         The questions in our assessment tool were based on: Alexander J.A.M.
         </p>
@@ -203,30 +205,7 @@ const initialSetUp = () => {
         </div>
     </div>
 
-    <div style="background-color:#dcddde;width:100%;height:700px">
-    <div class='left' style='width:50%;content-align:left;padding-left:50px'>
-        <p class='font1 header'>Internet skills form a crucial part of digital inclusion to assist you with:</p>
-        <p class='font1'>
-        1. Everyday living: Using a search engine for research, emailing, banking, paying bills, reading news, accessing services (e.g. MyGov), making Zoom or other video calls.
-        </p>
-        <p class='font1'>
-        2. Shopping and entertainment: Various forms of online shopping, consuming books/magazines/movies/TV online.
-        </p>
-        <p class='font1'>
-        3. Social networking: Chatting on messenger apps, uploading content for friends and family.
-        </p>
-        <p class='font1'>
-        4. Gaming: Playing standalone or connected/networked games online.
-        </p>
-        
-    </div>
-        <div class='right' style='padding:40px'>
-            <img class='category_images' src='img/tanned_santa.png' alt='image'>
-        </div>
-        <div style='padding:400px'>
-            <button class="btn see-result" onclick="window.scrollBy(0,700)">SEE MY RESULTS</button>
-        </div>
-    </div>
+
 
 
     <div class='left' style="width:60%; padding-left: 40px" id='to-capture'>

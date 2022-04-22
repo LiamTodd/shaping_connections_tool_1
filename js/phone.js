@@ -158,29 +158,14 @@ const initialSetUp = () => {
         validation of the Internet Skills Scale (ISS), Information, Communication &
         Society, 19:6, 804-823, DOI: 10.1080/1369118X.2015.1078834
         </p>
-        <br><br><br>
+        <br><br>
+        <button class="btn see-result" onclick="window.scrollBy(0,620)">SEE MY RESULTS</button>
+        <br><br>
+
     </div>
     </div>
 
-    <div style="background-color:#dcddde;width:${maxWidth};height:fit-content">
-    <div style='text-align:center;padding:10px'>
-        <img class='category_images' style='width:${maxWidth-10}px;height:auto' src='img/tanned_santa_edited.png' alt='image'>
-        <p class='font1 header' style='font-size:20px'>Internet skills form a crucial part of digital inclusion to assist you with:</p>
-        <p class='font1' style='font-size:15px'>
-        1. Everyday living: Using a search engine for research, emailing, banking, paying bills, reading news, accessing services (e.g. MyGov), making Zoom or other video calls.
-        </p>
-        <p class='font1' style='font-size:15px'>
-        2. Shopping and entertainment: Various forms of online shopping, consuming books/magazines/movies/TV online.
-        </p>
-        <p class='font1' style='font-size:15px'>
-        3. Social networking: Chatting on messenger apps, uploading content for friends and family.
-        </p>
-        <p class='font1' style='font-size:15px'>
-        4. Gaming: Playing standalone or connected/networked games online.
-        </p>
-        <button class="btn see-result" onclick="window.scrollBy(0,620)">SEE MY RESULTS</button>
-    </div>
-    <br><br>
+
 
    <div style="width:${maxWidth}; padding: 10px; background-color: white">
       <div id='to-capture'>
