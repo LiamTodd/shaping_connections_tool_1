@@ -133,7 +133,7 @@ const initialSetUp = () => {
     `
     <div style="padding: 15px;height:fit-content;width:${maxWidth}">
     <div style="padding-top:10px">
-      <button class="btn back-button" onClick="window.location.href='https://www.shapingconnections.org/'">BACK</button>
+      <button class="btn back-button" onClick="window.location.href='https://www.shapingconnections.org/tool-1'">BACK</button>
       <br><br>
       <img class='top-img' style='width:${maxWidth-10}px;height:auto' src="img/Dawn_edited.png">
       <br><br>

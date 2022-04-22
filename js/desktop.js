@@ -168,7 +168,7 @@ const initialSetUp = () => {
     `
     <div style="padding: 40px;height:350px;">
     <div class="left" style="width:40%;padding-top:50px">
-      <button class="btn back-button" onClick="window.location.href='https://www.shapingconnections.org/'">BACK</button>
+      <button class="btn back-button" onClick="window.location.href='https://www.shapingconnections.org/tool-1'">BACK</button>
       <h1 class="font1">How confident are you around tehcnology in general?</h1>
       <p class="font1">Answer <u><b>yes/no</b></u> as to whether you could confidently perform the following tasks.</p>
       <button class="btn get-started" onclick="window.scrollBy(0,450)"; >GET STARTED</button>
