@@ -208,11 +208,18 @@ const initialSetUp = () => {
 
 
 
-    <div class='left' style="width:60%; padding-left: 40px" id='to-capture'>
-        <h1 class="font1" >Based on our assessment tool, your level of internet skills confidence looks like this:</h1>
-        <div id='radar-container'>
+    <div class='left' style="width:60%; padding-left: 40px">
+        <div id='to-capture'>
+            <h1 class="font1" >Based on our assessment tool, your level of internet skills confidence looks like this:</h1>
+            <div id='radar-container'>
+            </div>
         </div>
+        <p style='font-size:10px;padding-bottom:40px' class='font1'>
+        Tool designed by Liam Todd - toddliam26@gmail.com
+        </p>
+
     </div>
+
     <div class='right' style="padding-top: 40px; padding-right: 100px">
         <img class='bottom-img' src="img/tool 1.png">
         <br><br>
@@ -221,14 +228,10 @@ const initialSetUp = () => {
             <br><br>
             <button class="btn take-back" onClick="window.location.href='https://www.shapingconnections.org/'">LEARN MORE</button>
 
-            
-        <p style='font-size:8px' class='font1'>
-            Tool designed by Liam Todd - toddliam26@gmail.com
-        </p>
         
         </div>
-    </div>
 
+    </div>
 
 
     `
