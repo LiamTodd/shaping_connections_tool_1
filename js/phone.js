@@ -15,7 +15,7 @@ const imgSources = ["technical_skills.png", "information_and_search_skills.png",
 const floatOrder=["left", "right"]
 
 const questions = [
-    ["Download files or photos from the internet","Download files or photos from the internet", "Use shortcut keys on my computer and mobile devices (e.g., CTRL-C for copy, CTRL- S for save)", "Bookmark a website on my computer and mobile devices"],
+    ["Download files or photos from the internet","Change my passwords and privacy settings", "Use shortcut keys on my computer and mobile devices (e.g., CTRL-C for copy, CTRL- S for save)", "Bookmark a website on my computer and mobile devices"],
     ["Find the best keywords for online searches", "Navigate websites to find what I am looking for", "Tell the difference between real and fake information online", "Find a website I visited before"],
     ["Download apps to my mobile devices (e.g., phone, tablet)", "Set up apps on a mobile device so that they work well for me", "Synchronising the use of mobile devices and other ICT", "Keep track of the costs of mobile app use"],
     ["Change who I share content with online (e.g., friends, friends of friends, public)", "Add or remove people from the contact lists", "Block people from seeing what I post online", "Purposely deciding when and which information I should and shouldn’t share online"],
