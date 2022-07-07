@@ -179,9 +179,7 @@ const initialSetUp = () => {
       </div>
 
       <br><br><br>
-      <p style='font-size:8px;text-align:center' class='font1'>
-      Tool designed by Liam Todd - toddliam26@gmail.com
-      </p>
+
     </div>
 
     `
