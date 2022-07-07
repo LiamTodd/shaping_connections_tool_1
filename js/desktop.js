@@ -214,9 +214,6 @@ const initialSetUp = () => {
             <div id='radar-container'>
             </div>
         </div>
-        <p style='font-size:10px;padding-bottom:40px' class='font1'>
-        Tool designed by Liam Todd - toddliam26@gmail.com
-        </p>
 
     </div>
 
